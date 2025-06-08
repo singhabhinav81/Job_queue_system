@@ -6,7 +6,7 @@ services:
     container_name: jobqueue_db
     restart: always
     environment:
-      POSTGRES_DB: jobqueue
+      POSTGRES_DB: jobs_db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres@123
     ports:
