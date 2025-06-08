@@ -6,7 +6,7 @@ services:
     container_name: jobqueue_db
     restart: always
     environment:
-      POSTGRES_DB: jobs_db
+      POSTGRES_DB: jobqueue
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres@123
     ports:
@@ -14,7 +14,6 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./db_init:/docker-entrypoint-initdb.d  # Run SQL on first boot
-
 
   web:
     build: .
@@ -29,7 +28,5 @@ services:
     volumes:
       - .:/app
 
-
 volumes:
   postgres_data:
-
