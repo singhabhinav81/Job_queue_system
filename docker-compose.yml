@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       POSTGRES_DB: jobs_db
-      POSTGRES_USER: jobsuser
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres@123
     ports:
       - "5432:5432"
