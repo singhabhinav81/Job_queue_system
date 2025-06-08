@@ -13,7 +13,6 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./db_init:/docker-entrypoint-initdb.d  # Run SQL on first boot
 
   web:
     build: .
